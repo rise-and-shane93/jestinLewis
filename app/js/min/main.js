@@ -1,0 +1,1 @@
+"use strict";var $pausePlay=$(".pausePlay"),$pause=$(".fa-pause"),$play=$(".fa-play"),$lewisVideo=$("#lewisVideo");$play.hide(),$pausePlay.click(function(){$(this).hasClass("fa-pause")?($lewisVideo.trigger("pause"),$pause.hide(),$play.show()):($lewisVideo.trigger("play"),$play.hide(),$pause.show())});
