@@ -1,26 +1,64 @@
 $mainColor: #fff;
+$red: #F00;
 $half: 50%;
 $Barlow: 'Barlow', sans-serif;
 $PtSansNarrow: 'PT Sans Narrow', sans-serif;
 $Raleway: 'Raleway', sans-serif;
 $Staatliches: 'Staatliches', sans-serif;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
 
 .testing {
     width: percentage(6/7);
 }
 
 header {
-    background-color: $mainColor;
+    background: url('../images/dark-texture-bkg.jpg');
+    background-size: cover;
+}
+
+.navbar {
+
+    .nav-link {
+        text-align: center;
+
+        p {
+            margin: 0;
+        }
+
+    }
+
+    .mainLinkName {
+        text-transform: uppercase;
+        font-family: $Raleway;
+        font-weight: 900;
+    }
+
+    .subLinkName {
+        font-family: $Barlow;
+        font-size: 0.8rem;
+        font-style: italic;
+    }
+
 }
 
 #upperHeader {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     img {
         width: 250px;
     }
 
     h1 {
         font-family: $Staatliches;
+        text-align: center;
+        color: $red;
     }
+
 }
 
 #welcome {
@@ -86,3 +124,14 @@ header {
         padding: 11px 15px;
     }
 }
+
+// @media (min-width: $breakpoint-tablet) {
+//     .navbar {
+//         .mobileNavbar {
+//             display: none;
+//         }
+//         .desktopNavbar {
+//             display: block;
+//         }
+//     }
+// }

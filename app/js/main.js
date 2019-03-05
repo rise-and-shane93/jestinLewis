@@ -22,3 +22,20 @@ $pausePlay.click(function() {
         $pause.show();
     }
 });
+
+//navbar hover stuff
+const $navLink = $('.nav-link');
+const $mainLink = $('.mainLinkName');
+const $subLink = $('.subLinkName');
+$mainLink.css('color', 'red');
+$subLink.css('color', 'blue');
+
+$navLink.mouseover(function() {
+    $mainLink.css('color', 'blue');
+    $subLink.css('color', 'red');
+});
+
+$navLink.mouseout(function() {
+    $mainLink.css('color', 'red');
+    $subLink.css('color', 'blue');
+});
