@@ -19,8 +19,11 @@ header {
 
 .navbar {
 
+    //background-color: #fff;
+
     .nav-link {
         text-align: center;
+        //color: #000;
 
         p {
             margin: 0;
@@ -48,6 +51,8 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: url('../images/dark-texture-bkg.jpg');
+    background-size: cover;
 
     img {
         width: 250px;
@@ -97,6 +102,7 @@ header {
         width: 65%;
         height: auto;
     }
+    
     .pausePlay {
         background-color: rgb(238,226,220);
         width: 40px;
@@ -125,13 +131,13 @@ header {
     }
 }
 
-// @media (min-width: $breakpoint-tablet) {
-//     .navbar {
-//         .mobileNavbar {
-//             display: none;
-//         }
-//         .desktopNavbar {
-//             display: block;
-//         }
-//     }
-// }
+@media (min-width: $breakpoint-desktop) {
+    header {
+        background: url('../images/dark-texture-bkg.jpg');
+        background-size: cover;
+        
+        .navbar {
+            background: none;
+        }
+    }    
+}

@@ -23,19 +23,20 @@ $pausePlay.click(function() {
     }
 });
 
-//navbar hover stuff
-const $navLink = $('.nav-link');
-const $mainLink = $('.mainLinkName');
-const $subLink = $('.subLinkName');
-$mainLink.css('color', 'red');
-$subLink.css('color', 'blue');
+//sets the navbar based on user agent
+var navbar = document.querySelector('.navbar');
 
-$navLink.mouseover(function() {
-    $mainLink.css('color', 'blue');
-    $subLink.css('color', 'red');
-});
-
-$navLink.mouseout(function() {
-    $mainLink.css('color', 'red');
-    $subLink.css('color', 'blue');
-});
+if ( navigator.userAgent.match(/Android/i)
+        || navigator.userAgent.match(/webOS/i)
+        || navigator.userAgent.match(/iPhone/i)
+        //|| navigator.userAgent.match(/iPad/i)
+        || navigator.userAgent.match(/iPod/i)
+        || navigator.userAgent.match(/BlackBerry/i)
+        || navigator.userAgent.match(/Windows Phone/i)
+        ) {
+        navbar.classList.remove("navbar-dark");
+        navbar.classList.add("bg-light", "navbar-light");
+        //navbar.classList.add("navbar-light");
+    } else {
+        navbar.classList.remove("bg-light");
+    }
