@@ -23,6 +23,8 @@ header {
 
 h1 {
     text-align: center;
+    font-family: $Barlow;
+    font-weight: 600;
 }
 
 .navbar {
@@ -160,6 +162,43 @@ h1 {
 
     }
 
+}
+
+#camp {
+
+    background: url("../images/camp/image9.jpeg");
+    background-size: cover;
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+    }
+
+    i {
+        text-align: center;
+    }
+    .buttons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+
+        a {
+            border-radius: 5px;
+            padding: 5px 15px;
+            
+            &:Hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    p {
+        text-align: center;
+    }
 }
 
 @media (min-width: $breakpoint-desktop) {
