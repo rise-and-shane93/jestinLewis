@@ -255,6 +255,48 @@ p, a, button {
     
 }
 
+#shop {
+
+    background-color: #fffafa;
+    position: relative;
+
+    .comingSoon {
+        color: #fff;
+        background-color: rgba(2,0,36,0.5);
+        position: absolute;
+        z-index: 10;
+        top: $half;
+        left: $half;
+        transform: translate(-$half, -$half);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        h1 {
+            font-size: 4rem;
+        }
+    }
+
+    .shopItem {
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 5px 5px 15px 0px #ccc;
+        
+        h5, p {
+            text-align: center;
+            font-family: $PtSansNarrow;
+        }
+
+        .itemPrice {
+            font-weight: 800;
+        }
+
+    }
+}
+
 @media (min-width: $breakpoint-desktop) {
     header {
         background: url('../images/dark-texture-bkg.jpg');
