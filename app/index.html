@@ -10,7 +10,7 @@
     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow:400,600,900|PT+Sans+Narrow|Raleway:400,900|Staatliches">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="css/lightbox.min.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -69,9 +69,7 @@
           </nav>
     </header>
     <main>
-        <!-- <h1>Hello Wo</h1> -->
         <div class="jumbotron" id="welcome" class="my-5">
-        <!-- <div id="welcome"> -->
             <video muted loop id="lewisVideo">
                 <source src="../videos/highlights3.mp4" type="video/mp4">
                 <source src="../videos/highlights3.ogg" type="video/ogg">
@@ -80,7 +78,7 @@
             <i class="fa fa-pause pausePlay"></i>
             <i class="fa fa-play pausePlay"></i>
         </div><!--/jumbotron-->
-        <div class="container">
+        <div class="container mb-5">
             <h1>THANK YOU GOD</h1>
             <section id="about">
                 <div class="vl"></div>
@@ -103,20 +101,89 @@
                     </div><!--/.row-->
             </section>
         </div><!--/container-->
-        <section id="camp" class="my-5">
-            <div class="container">
+        <section id="camp" class="mt-5 py-5">
+            <div class="container py-5">
                 <i class="fas fa-basketball-ball"></i>
                 <h1>Underrated Youth Basketball Camp</h1>
                 <p>I'm excited to host my nth annual Basketball Camp this summer in Richmond, VA. <br>
                     This camp will include fundamental development, guest speakers, team play, and much more&#33;</p>
                 <p>For more information, view the promo and gallery photos below, or click the button to sign up&#33;</p>
                 <div class="buttons">
-                    <a href="" class="btn-primary">View Promo</a>
-                    <a href="" class="btn-primary">Gallery</a>
-                    <a href="" class="btn-primary">Sign me up&#33;</a>
-                </div><!--/.buttons-->     
+                    <button type="button" class="btn-danger my-2" data-toggle="modal" data-target="#promoImg">View Promo</button>
+                    <button id="galleryButton" type="button" class="btn-danger my-2" data-toggle="modal" data-target="#campGallery">Gallery</button>
+                    <button type="button" class="btn-danger my-2" data-toggle="modal" data-target="#signUpForm">Sign me up&#33;</button>
+                </div><!--/.buttons-->
+                <!--START MODAL-->
+                <!--#promoImg modal-->
+                <div class="modal fade" id="promoImg" tabindex="-1" role="dialog" aria-labelledby="promoImgTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Camp Promo</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/camp/promo.jpg" alt="The promo poster for Jesin Lewis's 
+                                summer basketball camp" class="img-fluid">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/#promoImg modal-->
+                <!--#promoImg modal-->
+                <div class="modal fade" id="signUpForm" tabindex="-1" role="dialog" aria-labelledby="signUpFormTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Sign Up Form</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                            </div>
+                            <div class="modal-body">
+                                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScgXh66GVn3rU3PEHdPWRn8u4yRsdTxry15RadFQtwUxXqrUg/viewform?embedded=true" 
+                                width="100%" height="1186" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/#promoImg modal-->
+                <!--END MODAL-->   
             </div><!--/.container-->
+            <div class="arrow-up"></div>
         </section><!--/#camp-->
+        <section id="gallery">
+            <div class="photo-gallery py-5">
+                <div class="closeWindow">&times;</div>
+                <div class="container">
+                    <div class="intro">
+                        <h2 class="text-center">Lightbox Gallery</h2>
+                        <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae. </p>
+                    </div><!--/.intro-->
+                    <div class="row photos">
+                        <div class="col-6 col-md-4 col-lg-3 item my-2"><a href="images/camp/image1.jpeg" data-lightbox="photos"><img class="img-fluid" src="images/camp/image1.jpeg"></a></div>
+                        <div class="col-6 col-md-4 col-lg-3 item my-2"><a href="images/camp/image2.jpeg" data-lightbox="photos"><img class="img-fluid" src="images/camp/image2.jpeg"></a></div>
+                        <div class="col-6 col-md-4 col-lg-3 item my-2"><a href="images/camp/image3.jpeg" data-lightbox="photos"><img class="img-fluid" src="images/camp/image3.jpeg"></a></div>
+                        <div class="col-6 col-md-4 col-lg-3 item my-2"><a href="images/camp/image4.jpeg" data-lightbox="photos"><img class="img-fluid" src="images/camp/image4.jpeg"></a></div>
+                        <div class="col-6 col-md-4 col-lg-3 item my-2"><a href="images/camp/image5.jpeg" data-lightbox="photos"><img class="img-fluid" src="images/camp/image5.jpeg"></a></div>
+                        <div class="col-6 col-md-4 col-lg-3 item my-2"><a href="images/camp/image6.jpeg" data-lightbox="photos"><img class="img-fluid" src="images/camp/image6.jpeg"></a></div>
+                        <div class="col-6 col-md-4 col-lg-3 item my-2"><a href="images/camp/image7.jpeg" data-lightbox="photos"><img class="img-fluid" src="images/camp/image7.jpeg"></a></div>
+                        <div class="col-6 col-md-4 col-lg-3 item my-2"><a href="images/camp/image8.jpeg" data-lightbox="photos"><img class="img-fluid" src="images/camp/image8.jpeg"></a></div>
+                        <div class="col-6 col-md-4 col-lg-3 item my-2"><a href="images/camp/image9.jpeg" data-lightbox="photos"><img class="img-fluid" src="images/camp/image9.jpeg"></a></div>
+                        <div class="col-6 col-md-4 col-lg-3 item my-2"><a href="images/camp/image10.jpeg" data-lightbox="photos"><img class="img-fluid" src="images/camp/image10.jpeg"></a></div>
+                        <div class="col-6 col-md-4 col-lg-3 item my-2"><a href="images/camp/image11.jpeg" data-lightbox="photos"><img class="img-fluid" src="images/camp/image11.jpeg"></a></div>
+                    </div><!--/.row.photos-->
+                </div><!--/.container-->
+            </div><!--/.photo-gallery-->
+        </section><!--/#gallery-->
         <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScgXh66GVn3rU3PEHdPWRn8u4yRsdTxry15RadFQtwUxXqrUg/viewform?embedded=true" 
             width="640" height="1186" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
         <div style="width: 50%; height: 300px; background-color: red;" data-aos="zoom-in" data-aos-duration="3000" data-aos-once="true">
@@ -128,9 +195,18 @@
     </footer>
     <!-- <script src="js.main.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
     <script>AOS.init();</script>
     <script src="js/main.js"></script>
+    <!-- <script>
+        $(document).on("click", '[data-toggle="lightbox"]', function(event) {
+  event.preventDefault();
+  $(this).ekkoLightbox();
+});
+    </script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js.map"></script>-->
 </body>
 </html>

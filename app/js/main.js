@@ -94,3 +94,50 @@ function getRandomImageAbout() {
 }; 
 
 aboutImg.innerHTML = getRandomImageAbout();
+
+//opens/closes the photo gallery
+const $gallerySection = $("#gallery");
+const $galleryInner = $(".photo-gallery");
+const $galleryButton = $('#galleryButton');
+const $closeButton = $(".closeWindow");
+const $campInfo = $("#camp");
+const $blackArrow = $(".arrow-up");
+var height;
+
+if ( navigator.userAgent.match(/Android/i)
+|| navigator.userAgent.match(/webOS/i)
+|| navigator.userAgent.match(/iPhone/i)
+|| navigator.userAgent.match(/iPad/i)
+|| navigator.userAgent.match(/iPod/i)
+|| navigator.userAgent.match(/BlackBerry/i)
+|| navigator.userAgent.match(/Windows Phone/i)
+) {
+    height = "1300px";
+} else { 
+    height = "1000px";
+}
+
+
+$(document).ready(function() {
+    $gallerySection.css("height", "0");
+    $galleryInner.hide();
+    $blackArrow.hide();
+});
+
+$galleryButton.click(function() {
+    $blackArrow.fadeIn();
+    $gallerySection.animate({height: height}, 1000);
+    $("html, body").animate({
+        scrollTop: $gallerySection.offset().top
+        }, 1000);
+    $galleryInner.delay(1000).fadeIn(1500);
+});
+
+$closeButton.click(function() {
+    $galleryInner.fadeOut().delay(500);
+    $("html, body").animate({
+        scrollTop: $campInfo.offset().top
+        }, 1000);
+    $gallerySection.animate({height: "0px"}, 1000);
+    $blackArrow.fadeOut();
+});
