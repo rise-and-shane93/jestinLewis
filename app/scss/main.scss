@@ -22,6 +22,14 @@ header {
     display: none;
 }
 
+.hideBrOnMobile {
+    display: none;
+}
+
+.hideBrOnDesk {
+    display: block;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: $Barlow;
 }
@@ -284,6 +292,16 @@ p, a, button {
         border: 2px solid #ccc;
         border-radius: 5px;
         box-shadow: 5px 5px 15px 0px #ccc;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 75%;
+        margin: 0 auto;
+
+        img {
+            max-width: 55%;
+        }
         
         h5, p {
             text-align: center;
@@ -298,6 +316,15 @@ p, a, button {
 }
 
 @media (min-width: $breakpoint-desktop) {
+
+    .hideBrOnMobile {
+        display: block;
+    }
+    
+    .hideBrOnDesk {
+        display: none;
+    }
+
     header {
         background: url('../images/dark-texture-bkg.jpg');
         background-size: cover;
@@ -431,4 +458,17 @@ p, a, button {
     
         }
     }
+
+    #shop {
+
+        .shopItem {
+
+            img {
+                max-width: 75%;
+            }
+
+        }
+
+    }
+    
 }
