@@ -89,13 +89,15 @@ function getRandomImageAbout() {
 
 aboutImg.innerHTML = getRandomImageAbout();
 
-//opens/closes the photo gallery
+//opens/closes the photo gallery and adds the py class to the camp section
 const $gallerySection = $("#gallery");
 const $galleryInner = $(".photo-gallery");
 const $galleryButton = $('#galleryButton');
 const $closeButton = $(".closeWindow");
 const $campInfo = $("#camp");
 const $blackArrow = $(".arrow-up");
+const $camp = $("#camp");
+const $campCont = $("#camp .container");
 var height;
 
 if ( navigator.userAgent.match(/Android/i)
@@ -107,8 +109,12 @@ if ( navigator.userAgent.match(/Android/i)
 || navigator.userAgent.match(/Windows Phone/i)
 ) {
     height = "1300px";
+    $camp.addClass("py-2");
+    $campCont.addClass("py-2");
 } else { 
     height = "1000px";
+    $camp.addClass("py-5");
+    $campCont.addClass("py-5");
 }
 
 
