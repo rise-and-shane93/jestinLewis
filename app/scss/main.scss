@@ -8,6 +8,32 @@ $Staatliches: 'Staatliches', sans-serif;
 $triangleSize: 30px;
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1024px;
+$text: value="text";
+$submit: value="submit";
+
+@mixin flexRow() {
+    display: flex;
+    flex-direction: row;
+    @content
+}
+
+@mixin flexColumn() {
+    display: flex;
+    flex-direction: column;
+    @content
+}
+
+@mixin flexAllCenter() {
+    justify-content: center;
+    align-items: center;
+    @content
+}
+
+@mixin easeInOut($transition) {
+    transition: $transition;
+    @content
+}
+
 
 *, *::after, *::before {
     box-sizing: border-box;
@@ -69,10 +95,8 @@ p, a, button {
 
 #upperHeader {
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flexColumn();
+    @include flexAllCenter();
     background: url('../images/dark-texture-bkg.jpg');
     background-size: cover;
 
@@ -157,10 +181,8 @@ p, a, button {
 
     .tuRandomImg { 
 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include flexColumn();
+        @include flexAllCenter();
 
         img {
             max-height: 500px;
@@ -168,10 +190,8 @@ p, a, button {
     }
 
     .intro {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include flexColumn();
+        @include flexAllCenter();
 
         p {
             line-height: 2;
@@ -191,10 +211,8 @@ p, a, button {
     position: relative;
     
     .container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include flexColumn();
+        @include flexAllCenter();
         background-color: rgba(2,0,36,0.5);
         border-radius: 5px;
         color: white;
@@ -210,8 +228,7 @@ p, a, button {
     }
 
     .buttons {
-        display: flex;
-        flex-direction: column;
+        @include flexColumn();
         align-items: center;
         justify-content: space-around;
         //width: 600px;
@@ -296,13 +313,11 @@ p, a, button {
     }
 
     .shopItem {
+        @include flexColumn();
+        @include flexAllCenter();
         border: 2px solid #ccc;
         border-radius: 5px;
         box-shadow: 5px 5px 15px 0px #ccc;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
         width: 75%;
         margin: 0 auto;
 
@@ -319,6 +334,38 @@ p, a, button {
             font-weight: 800;
         }
 
+    }
+}
+
+#contact {
+    .container {
+        @include flexColumn();
+        @include flexAllCenter();
+    }
+    form {
+        @include flexColumn();
+        @include flexAllCenter();
+        width: 55%;
+    }
+    fieldset {
+        width: 95%;
+    }
+    input[type="text"],
+    textarea, button[value="submit"] {
+        width: 100%;
+        border-radius: 5px;
+    }
+    input {
+        margin-bottom: 15px;
+    }
+    input, textarea,
+    input:focus,
+    textarea:focus,
+    button[value="submit"]:hover {
+        @include easeInOut(.3s ease-in-out);
+    }
+    button[value="submit"]:hover {
+        transform: scale(1.01);
     }
 }
 
