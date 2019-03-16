@@ -141,3 +141,17 @@ $closeButton.click(function() {
     $gallerySection.animate({height: "0px"}, 1000);
     $blackArrow.fadeOut();
 });
+
+//prevents form submission if privacy policy checkbox isn't checked
+// const $checkbox = $("#privacyPolicyCheck");
+// const $alertMessage = $(".alertMessage");
+// const $submitButton = $("#contact_form_submit");
+
+// $alertMessage.hide();
+
+// $("form").submit(function(e) {
+//     if ($checkbox).not(":checked") {
+//         e.preventDefault();
+//         $alertMessage.show();
+//     }
+// });

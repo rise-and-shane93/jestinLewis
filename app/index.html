@@ -228,20 +228,20 @@
                 <h1>Shop<br class="hideBrOnDesk"> coming<br class="hideBrOnDesk"> soon&#33;&#33;&#33;</h1>
             </div>
         </section><!--/#shop-->
-        <section id="contact">
-            <h1 class="py-3">Contact</h1>
+        <section id="contact" class="py-3">
+            <h1>Contact</h1>
             <div class="container">
                 <p style="text-align: center;">I would love to get in touch with you&#33; Please fill out the form below and I will
                     reach out to you as soon as possible.
                 </p>
-                <form method="post" action="https://formspree.io/jlewistutu5@icloud.com">
+                <form method="post" action="https://formspree.io/cdtharper@gmail.com">
                     <!-- <legend class="text-center">I would <strong>love</strong> to get in touch with you&#33;</legend> -->
                     <fieldset>
                         <input type="text" name="contact_name" placeholder="Name*" required><br>
                         <input type="text" name="contact_email" placeholder="Email Address*" required><br>
                         <textarea type="text" name="contact_message" placeholder="Message" rows="5"></textarea><br>
-                        <input type="checkbox" name="contact_checkbox" value="privacy-policy" required>
-                        I agree to the <a href="privacyPolicy" target="_blank">terms of service</a>.<br>
+                        <input type="checkbox" id="privacyPolicyCheck" name="contact_checkbox" value="privacy-policy" required>
+                        I agree to the <a href="privacyPolicy" target="_blank" style="font-size: 1rem;">terms of service</a>.<br>
                         <!-- <div class="security">
                             <label for="security_answer">What is <span class="securityQuestion"></span>&#63;</label>
                             <div class="row">
@@ -255,6 +255,7 @@
                         </div>securityAnswerDiv -->
                         <!-- <div class="g-recaptcha" data-callback="capcha_filled"
                         data-expired-callback="capcha_expired" data-sitekey="6LdqqYQUAAAAAK0vv_anvbjdFFgv53WC788XOhYc"></div>     -->
+                        <!-- <p class="alertMessage">Please check the box above to submit the form.</p> -->
                         <button type="submit" value="submit" name="contact_form_submit" id="contact_form_submit" class="btn">Submit&#33;</button>
                     </fieldset>
                 </form>

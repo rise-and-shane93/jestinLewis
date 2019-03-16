@@ -345,7 +345,7 @@ p, a, button {
     form {
         @include flexColumn();
         @include flexAllCenter();
-        width: 55%;
+        width: 85%;
     }
     fieldset {
         width: 95%;
@@ -363,6 +363,9 @@ p, a, button {
     textarea:focus,
     button[value="submit"]:hover {
         @include easeInOut(.3s ease-in-out);
+    }
+    .alertMessage {
+        color: red;
     }
     button[value="submit"]:hover {
         transform: scale(1.01);
@@ -536,6 +539,12 @@ p, a, button {
 
         }
 
+    }
+
+    #contact {
+        form {
+            width: 55%;
+        }
     }
     
 }
