@@ -229,41 +229,81 @@
             </div>
         </section><!--/#shop-->
         <section id="contact" class="py-3">
-            <h1>Contact</h1>
             <div class="container">
-                <p style="text-align: center;">I would love to get in touch with you&#33; Please fill out the form below and I will
-                    reach out to you as soon as possible.
-                </p>
-                <form method="post" action="https://formspree.io/cdtharper@gmail.com">
-                    <!-- <legend class="text-center">I would <strong>love</strong> to get in touch with you&#33;</legend> -->
-                    <fieldset>
-                        <input type="text" name="contact_name" placeholder="Name*" required><br>
-                        <input type="text" name="contact_email" placeholder="Email Address*" required><br>
-                        <textarea type="text" name="contact_message" placeholder="Message" rows="5"></textarea><br>
-                        <input type="checkbox" id="privacyPolicyCheck" name="contact_checkbox" value="privacy-policy" required>
-                        I agree to the <a href="privacyPolicy" target="_blank" style="font-size: 1rem;">terms of service</a>.<br>
-                        <!-- <div class="security">
-                            <label for="security_answer">What is <span class="securityQuestion"></span>&#63;</label>
+                <article id="formOuter">
+                    <div id="contactTitle">
+                        <div style="padding: 40px 0; background-color: rgba(255,255,255,0.3);">
+                            <h1>Contact</h1>
+                            <p style="text-align: center; font-weight: bold;">I would love to get in touch with you&#33; Please fill out the form below<br class="hideBrOnMobile"> and I will
+                                reach out to you as soon as possible.
+                            </p>        
+                        </div>
+                    </div><!--/#contactTitle-->
+                    <form method="post" action="https://formspree.io/cdtharper@gmail.com" class="pt-2">
+                        <!-- <legend class="text-center">I would <strong>love</strong> to get in touch with you&#33;</legend> -->
+                        <fieldset>
+                            <label for="contact_name">Your Name &#42;</label>
                             <div class="row">
                                 <div class="col-6">
-                                    <input type="text" name="security_answer" id="security_answer">
-                                </div>/col
+                                    <input type="text" name="contact_name" placeholder="First name" required>
+                                </div>
                                 <div class="col-6">
-                                    <a id="save_answer" class="btn btn-danger">Save Answer</a>
-                                </div>/col            
-                            </div>/row
-                        </div>securityAnswerDiv -->
-                        <!-- <div class="g-recaptcha" data-callback="capcha_filled"
-                        data-expired-callback="capcha_expired" data-sitekey="6LdqqYQUAAAAAK0vv_anvbjdFFgv53WC788XOhYc"></div>     -->
-                        <!-- <p class="alertMessage">Please check the box above to submit the form.</p> -->
-                        <button type="submit" value="submit" name="contact_form_submit" id="contact_form_submit" class="btn">Submit&#33;</button>
-                    </fieldset>
-                </form>
+                                    <input type="text" name="contact_name" placeholder="Last name" required>
+                                </div>
+                            </div>
+                            <label for="contact_email">Email Address &#42;</label>
+                            <input type="text" name="contact_email" placeholder="Eg. example@email.com" required><br>
+    
+                            <label for="contact_phone_number">Phone Number</label><br>
+                            <input type="tel" id="phone" name="contact_phone_number" placeholder="Eg. (123) 456-7890"
+                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+    
+                            <label for="contact_message">Message</label>
+                            <textarea type="text" name="contact_message" placeholder="What's up Tu??" rows="3"></textarea><br>
+                            <input type="checkbox" id="privacyPolicyCheck" name="contact_checkbox" value="privacy-policy" required>
+                            I agree to the <a href="privacyPolicy" target="_blank" style="font-size: 1rem;">terms of service</a>.<br>
+                            <!-- <div class="security">
+                                <label for="security_answer">What is <span class="securityQuestion"></span>&#63;</label>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <input type="text" name="security_answer" id="security_answer">
+                                    </div>/col
+                                    <div class="col-6">
+                                        <a id="save_answer" class="btn btn-danger">Save Answer</a>
+                                    </div>/col            
+                                </div>/row
+                            </div>securityAnswerDiv -->
+                            <!-- <div class="g-recaptcha" data-callback="capcha_filled"
+                            data-expired-callback="capcha_expired" data-sitekey="6LdqqYQUAAAAAK0vv_anvbjdFFgv53WC788XOhYc"></div>     -->
+                            <!-- <p class="alertMessage">Please check the box above to submit the form.</p> -->
+                            <button type="submit" value="submit" name="contact_form_submit" class="mb-2 btn"
+                            id="contact_form_submit">Submit&#33;</button>
+                        </fieldset>
+                    </form>
+                </article>
             </div><!--/.container-->
         </section><!--/#contact-->
     </main>
     <footer>
-        
+        <div class="container">
+            <div class="footerLeft">
+                <div class="footerLeftItem">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Richmond, VA<br>Giessen, Germany</p>
+                </div><!--/.footerLeftItem-->
+                <div class="footerLeftItem">
+                    <i class="fas fa-phone"></i>
+                    <p><a href="tel:+11234567890">+1 (123) 456-7890</a></p>
+                </div><!--/.footerLeftItem-->
+                <div class="footerLeftItem">
+                    <i class="fas fa-envelope"></i>
+                    <p><a id="emailAddress" onClick="copyEmail()">Jlewistutu5@icloud.com</a></p>
+                </div><!--/.footerLeftItem-->
+            </div><!--/.footerLeft-->
+            <div class="footerRight">
+
+            </div><!--/.footerLeft-->
+        </div><!--/.container-->
     </footer>
     <!-- <script src="js.main.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

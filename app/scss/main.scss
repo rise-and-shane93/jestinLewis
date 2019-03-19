@@ -10,6 +10,7 @@ $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1024px;
 $text: value="text";
 $submit: value="submit";
+$grey: #DCDCDC;
 
 @mixin flexRow() {
     display: flex;
@@ -338,22 +339,48 @@ p, a, button {
 }
 
 #contact {
-    .container {
+    
+    background-color: rgb(2,0,36);
+    //color: white;
+    #formOuter {
+        background-color: white;
+    }
+    #contactTitle {
+        background-image: url("../images/basketballPicSm.jpg");
+        background-size: cover;
+        h1 {
+            color: black;
+            //padding: 50px 0;
+        }
+    }
+    .container, form {
         @include flexColumn();
         @include flexAllCenter();
     }
     form {
-        @include flexColumn();
-        @include flexAllCenter();
-        width: 85%;
+        background-color: lighten($grey, 8%);
     }
     fieldset {
         width: 95%;
     }
     input[type="text"],
+    input[type="tel"],
+    textarea {
+        border-radius: 0px;
+        border: 1px solid #ccc;
+        padding: 0.6rem;
+        font-family: $Raleway;
+    }
+    input[type="text"],
+    input[type="tel"],
     textarea, button[value="submit"] {
         width: 100%;
-        border-radius: 5px;
+    }
+    button[value="submit"] {
+        border-radius: 10px;
+        background-color: rgb(2,0,36);
+        font-family: $Raleway;
+        color: white;
     }
     input {
         margin-bottom: 15px;
@@ -363,9 +390,6 @@ p, a, button {
     textarea:focus,
     button[value="submit"]:hover {
         @include easeInOut(.3s ease-in-out);
-    }
-    .alertMessage {
-        color: red;
     }
     button[value="submit"]:hover {
         transform: scale(1.01);
@@ -542,8 +566,14 @@ p, a, button {
     }
 
     #contact {
+        @include flexColumn();
+        @include flexAllCenter();
+
+        #formOuter {
+            width: 60%;
+        }
         form {
-            width: 55%;
+            //width: 55%;
         }
     }
     

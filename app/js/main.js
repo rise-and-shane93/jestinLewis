@@ -142,16 +142,18 @@ $closeButton.click(function() {
     $blackArrow.fadeOut();
 });
 
-//prevents form submission if privacy policy checkbox isn't checked
-// const $checkbox = $("#privacyPolicyCheck");
-// const $alertMessage = $(".alertMessage");
-// const $submitButton = $("#contact_form_submit");
+//copies email address on click
 
-// $alertMessage.hide();
+  const email = document.querySelector("#emailAddress");
 
-// $("form").submit(function(e) {
-//     if ($checkbox).not(":checked") {
-//         e.preventDefault();
-//         $alertMessage.show();
-//     }
-// });
+email.onclick = function() {
+  document.execCommand("copy");
+}
+
+email.addEventListener("copy", function(event) {
+  event.preventDefault();
+  if (event.clipboardData) {
+    event.clipboardData.setData("text/plain", email.textContent);
+    console.log(event.clipboardData.getData("text"))
+  }
+});
