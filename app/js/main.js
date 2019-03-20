@@ -142,9 +142,13 @@ $closeButton.click(function() {
     $blackArrow.fadeOut();
 });
 
-//copies email address on click
+/*copies email address on click
+and has span hovering in and out of view*/
 
-  const email = document.querySelector("#emailAddress");
+const email = document.querySelector("#emailAddress");
+const clickToCopy = document.querySelector(".clickToCopy");
+clickToCopy.style.display = "none";
+clickToCopy.style.opacity = "0";
 
 email.onclick = function() {
   document.execCommand("copy");
@@ -157,3 +161,21 @@ email.addEventListener("copy", function(event) {
     console.log(event.clipboardData.getData("text"))
   }
 });
+
+$("#emailAddress").hover(function() {
+    $(".clickToCopy").show();
+    $(".clickToCopy").animate({opacity: 1}, 800);
+}, function() {
+    $(".clickToCopy").animate({opacity: 0}, 800);
+    $(".clickToCopy").hide();
+});
+
+/*
+email.addEventListener("mouseover", function() {
+    clickToCopy.style.display="inline";
+});
+
+email.addEventListener("mouseout", function() {
+    clickToCopy.style.display="none";
+});
+*/

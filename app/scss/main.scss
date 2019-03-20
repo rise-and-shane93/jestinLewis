@@ -394,6 +394,27 @@ p, a, button {
     button[value="submit"]:hover {
         transform: scale(1.01);
     }
+    
+}
+
+footer {
+    #emailAddress {
+        color: #007bff;
+
+        &:hover {
+            color: #37404E;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+    .clickToCopy {
+        background-color: rgb(2,0,36);
+        color: #fff;
+        border-radius: 10px;
+        font-weight: bold;
+        transition: all .3s ease-in-out;
+        padding: 5px;
+    }
 }
 
 @media (min-width: $breakpoint-desktop) {
