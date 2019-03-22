@@ -147,8 +147,29 @@ and has span hovering in and out of view*/
 
 const email = document.querySelector("#emailAddress");
 const clickToCopy = document.querySelector(".clickToCopy");
-clickToCopy.style.display = "none";
-clickToCopy.style.opacity = "0";
+const clickOrTap = document.querySelector(".clickOrTap");
+
+if ( navigator.userAgent.match(/Android/i)
+|| navigator.userAgent.match(/webOS/i)
+|| navigator.userAgent.match(/iPhone/i)
+|| navigator.userAgent.match(/iPad/i)
+|| navigator.userAgent.match(/iPod/i)
+|| navigator.userAgent.match(/BlackBerry/i)
+|| navigator.userAgent.match(/Windows Phone/i)
+) {
+    clickOrTap.textContent = "Tap";
+} else {
+    clickToCopy.style.display = "none";
+    clickToCopy.style.opacity = "0";
+    clickOrTap.textContent = "Click";
+    $("#emailAddress").hover(function() {
+        $(".clickToCopy").show();
+        $(".clickToCopy").animate({opacity: 1}, 800);
+    }, function() {
+        $(".clickToCopy").animate({opacity: 0}, 800);
+        $(".clickToCopy").hide();
+    });     
+}
 
 email.onclick = function() {
   document.execCommand("copy");
@@ -158,24 +179,11 @@ email.addEventListener("copy", function(event) {
   event.preventDefault();
   if (event.clipboardData) {
     event.clipboardData.setData("text/plain", email.textContent);
-    console.log(event.clipboardData.getData("text"))
+    console.log(event.clipboardData.getData("text"));
   }
 });
 
-$("#emailAddress").hover(function() {
-    $(".clickToCopy").show();
-    $(".clickToCopy").animate({opacity: 1}, 800);
-}, function() {
-    $(".clickToCopy").animate({opacity: 0}, 800);
-    $(".clickToCopy").hide();
+$("#emailAddress").click(function() {
+    $(".clickToCopy").text("Copied!");
 });
 
-/*
-email.addEventListener("mouseover", function() {
-    clickToCopy.style.display="inline";
-});
-
-email.addEventListener("mouseout", function() {
-    clickToCopy.style.display="none";
-});
-*/

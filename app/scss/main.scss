@@ -415,6 +415,73 @@ footer {
         transition: all .3s ease-in-out;
         padding: 5px;
     }
+    // .container {
+    //     @include flexColumn();
+    // }
+    .footerLeftItem {
+        @include flexRow();
+        align-items: center;
+        //@include flexAllCenter();
+        height: 45px;
+        margin: 10px 0;
+        i {
+            width: 40px;
+            height: 40px;
+            background-color: rgb(2,0,36);
+            color: #ccc;
+            //padding: 5px;
+            margin-right: 5px;
+            border-radius: $half;
+            font-size: 1.25rem;
+        }
+        .fa-map-marker-alt {
+            padding: 10px 13px;
+        }
+        .fa-phone, .fa-envelope {
+            padding: 10px;
+        }
+        p {
+            margin-bottom: 0;
+        }
+    }
+    .footerMiddle {
+        @include flexColumn();
+        align-items: center;
+        img {
+            width: 50%;
+        }
+        p {
+            justify-self: flex-end;
+        }
+    }
+.footerRight {
+        .socialMedia {
+            @include flexRow();
+            @include flexAllCenter();
+        }
+        .socialMediaIcon {
+            @include flexColumn();
+            @include flexAllCenter();
+            width: 40px;
+            height: 40px;
+            //padding: 15px;
+            margin: 10px;
+            background-color: #aaa;
+            color: #fff;
+            transition: .3s;
+            &:hover {
+                background-color: #777;
+                transition: .3s;
+            }
+            a {
+                color: white;
+                font-size: 1.5rem;
+            }
+            a:hover {
+                text-decoration: none;
+            }
+        }
+    }
 }
 
 @media (min-width: $breakpoint-desktop) {
@@ -595,6 +662,20 @@ footer {
         }
         form {
             //width: 55%;
+        }
+    }
+
+    footer {
+        // .footerMiddle {
+        //     @include flexColumn();
+        //     p {
+        //         justify-self: flex-end;
+        //     }
+        // }
+        .footerRight {
+            p {
+                font-size: 0.75rem;
+            }
         }
     }
     
