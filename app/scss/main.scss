@@ -43,7 +43,21 @@ $grey: #DCDCDC;
 header {
     background: url('../images/dark-texture-bkg.jpg');
     background-size: cover;
+    .spacer {
+        height: 91px;
+        width: 100%;
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+    }
 }
+.clear:after {
+   content: "";
+  clear: both;
+  display: table;
+}
+
 
 .jumbotron {
     display: none;

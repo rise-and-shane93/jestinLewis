@@ -1,3 +1,196 @@
+//add fixed-top class to navbar on scroll
+
+
+$(document).ready(function() {
+  var $navbar = $("#mainNav");
+  var $spacer = $(".spacer");
+  var $body = $("body");
+  var height;
+  
+  AdjustHeader(); // Incase the user loads the page from halfway down (or something);
+  $(window).scroll(function() {
+      AdjustHeader();
+  });
+
+  if ( navigator.userAgent.match(/Android/i)
+        || navigator.userAgent.match(/webOS/i)
+        || navigator.userAgent.match(/iPhone/i)
+        || navigator.userAgent.match(/iPad/i)
+        || navigator.userAgent.match(/iPod/i)
+        || navigator.userAgent.match(/BlackBerry/i)
+        || navigator.userAgent.match(/Windows Phone/i)
+        ) {
+        height = "83px";
+    } else {
+        height = "91px"
+    }
+  
+  function AdjustHeader(){
+    if ($(window).scrollTop() > 200) {
+      if (!$navbar.hasClass("fixed-top")) {
+        $navbar.addClass("fixed-top");
+        $body.css("padding-top" , height);
+        if ( navigator.userAgent.match(/Android/i)
+        || navigator.userAgent.match(/webOS/i)
+        || navigator.userAgent.match(/iPhone/i)
+        || navigator.userAgent.match(/iPad/i)
+        || navigator.userAgent.match(/iPod/i)
+        || navigator.userAgent.match(/BlackBerry/i)
+        || navigator.userAgent.match(/Windows Phone/i)
+        ) {
+            $navbar.css({
+                "background" : "none"
+            });
+            
+            console.log('mobile');
+        } else {
+            $navbar.css({
+                "background" : "url('../images/dark-texture-bkg.jpg')",
+                "background-size" : "cover"
+            });
+        }
+        // $navbar.css({
+        //     "background" : "url('../images/dark-texture-bkg.jpg')",
+        //     "background-size" : "cover"
+        // });
+      }
+    } else {
+      $navbar.removeClass("fixed-top");
+      $body.css("padding-top" , "0")
+    }
+  }
+});
+
+//smooth scroll on clicking nav links
+const $navbarLinks = $(".navbar-nav a");
+
+$navbarLinks.click(function(event) {
+    if ($(this).hasClass("homeLink")) {
+        $("html, body").animate({
+        scrollTop: $(".jumbotron").offset().top - 90
+        }, 1000);
+    } else if ($(this).hasClass("aboutMeLink")) {
+        $("html, body").animate({
+        scrollTop: $("#about").offset().top - 90
+        }, 1000);
+    } else if ($(this).hasClass("summerCampLink")) {
+        $("html, body").animate({
+        scrollTop: $("#camp").offset().top - 90
+        }, 1000);
+    } else if ($(this).hasClass("shopLink")) {
+        $("html, body").animate({
+        scrollTop: $("#shop").offset().top - 90
+        }, 1000);
+    } else {
+        $("html, body").animate({
+        scrollTop: $("#contact").offset().top - 90
+        }, 1000);
+    }
+});
+
+//changes the active class on page scroll
+//get offsets for all your div's.  Now. you can access the number of pixels from the top of the document
+//each object is by using one.top, two.top, or whatever you name your variables
+var $homeLink = $(".homeLink").offset();
+var $aboutMeLink = $("#aboutTitle").offset();
+var $summerCampLink = $("#camp").offset();
+var $shopLink = $("#shop").offset();
+var $contactLink = $("#contact").offset();
+
+/*
+$(document).ready(function() {
+    $(window).scroll(function(){
+        var screenPosition = $(document).scrollTop();
+        if (screenPosition < $homeLink.top) {
+            $( ".homeLink" ).addClass( "active" );
+            $(".aboutMeLink").removeClass("active");
+            $(".summerCampLink").removeClass("active");
+            $(".shopLink").removeClass("active");
+            $(".contactLink").removeClass("active");
+        }
+        if (screenPosition >= $aboutMeLink.top) {
+            $(".aboutMeLink").addClass("active");
+            $( ".homeLink" ).removeClass( "active" );
+            $(".summerCampLink").removeClass("active");
+            $(".shopLink").removeClass("active");
+            $(".contactLink").removeClass("active");
+        }
+        if (screenPosition >= $summerCampLink.top) {
+            $(".summerCampLink").addClass("active");
+            $(".aboutMeLink").removeClass("active");
+            $( ".homeLink" ).removeClass( "active" );
+            $(".shopLink").removeClass("active");
+            $(".contactLink").removeClass("active");
+        }
+        if (screenPosition >= $shopLink.top) {
+            $(".shopLink").addClass("active");
+            $(".summerCampLink").removeClass("active");
+            $(".aboutMeLink").removeClass("active");
+            $( ".homeLink" ).removeClass( "active" );
+            $(".contactLink").removeClass("active");
+        }
+        if (screenPosition >= $contactLink.top) {
+            $(".contactLink").addClass("active");
+            $(".shopLink").removeClass("active");
+            $(".summerCampLink").removeClass("active");
+            $(".aboutMeLink").removeClass("active");
+            $( ".homeLink" ).removeClass( "active" );
+        }
+    });
+});
+*/
+
+//$(document).ready(function () {
+    /*$(window).scroll(function(){
+        var window_top = $(window).scrollTop() + 12; 
+         the "12" should equal the margin-top value for nav.stickydiv
+        var div_top = $('#checkdiv').offset().top;
+        if (window_top >= div_top) {
+                $('nav').addClass('stickydiv');
+            } else {
+                $('nav').removeClass('stickydiv');
+            }
+    });*/  
+
+
+  $(document).on("scroll", onScroll);
+    // $('a[href^="#"]').on('click', function (e) {
+    //     e.preventDefault();
+    //     $(document).off("scroll");
+        
+    //     $('a').each(function () {
+    //         $(this).removeClass('active');
+    //     })
+    //     $(this).addClass('active');
+      
+    //     var target = this.hash,
+    //         menu = target;
+    //     $target = $(target);
+    //    $('html, body').stop().animate({
+    //         'scrollTop': $target.offset().top+1000
+    //     }, 600, 'swing', function () {
+    //         window.location.hash = target;
+    //         $(document).on("scroll", onScroll);
+    //     });
+    // });
+//});
+
+function onScroll(event){
+    var scrollPos = $(document).scrollTop() + 125;
+    
+    $('.navbar-nav a').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            $('.navbar-nav a').removeClass("active");
+            currLink.addClass("active");
+        }
+        else{
+            currLink.removeClass("active");
+        }
+    });
+}
+
 //play/pause carousel
 var $pausePlay = $('.pausePlay');
 var $pause = $('.fa-pause');
@@ -119,7 +312,8 @@ if ( navigator.userAgent.match(/Android/i)
 
 
 $(document).ready(function() {
-    $gallerySection.css("height", "0");
+    //$gallerySection.css("height", "0");
+    $gallerySection.hide();
     $galleryInner.hide();
     $blackArrow.hide();
 });

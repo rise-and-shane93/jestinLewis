@@ -22,7 +22,7 @@
                 <h1>Jestin Lewis</h1>
             </div>
         </article><!--/#upperHeader-->
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-expand-lg clear" id="mainNav">
             <a class="navbar-brand" href="#">
                 <img src="images/logo4.png" alt="Jestin Lewis logo">
             </a>
@@ -43,31 +43,34 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Shop</a>
-                    </li>
+                    </li>a
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contact</a>
                     </li>
                 </ul> -->
                 <ul class="navbar-nav">
-                    <a class="nav-link active" href="#">
+                    <a class="nav-link active homeLink" href="#welcome">
                         Home
                     </a>
-                    <a class="nav-link" href="#">
+                    <a class="nav-link aboutMeLink" href="#about">
                         About Me
                     </a>
-                    <a class="nav-link" href="#">
+                    <a class="nav-link summerCampLink" href="#camp">
                         Summer Camp
                     </a>
-                    <a class="nav-link" href="#">
+                    <a class="nav-link shopLink" href="#shop">
                         Shop
                     </a>
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="#contact">
                         Contact
                     </a>
                 </ul>
             </div><!--/.navbar-collapse-->
           </nav>
-    </header>
+<!--           <div class="spacer">
+              <p>hey</p>
+          </div>
+ -->    </header>
     <main>
         <div class="jumbotron" id="welcome" class="my-5">
             <video muted loop id="lewisVideo">
@@ -79,8 +82,8 @@
             <i class="fa fa-play pausePlay"></i>
         </div><!--/jumbotron-->
         <div class="container mb-5">
-            <h1>THANK YOU GOD</h1>
             <section id="about">
+                <h1 id="aboutTitle">THANK YOU GOD</h1>
                 <div class="vl"></div>
                     <div class="row">
                         <div class="col-12 col-md-6 tuRandomImg">
@@ -309,7 +312,7 @@
                 </div><!--/.col-->
                 <div class="col-12 col-md-4 order-2 order-md-3 footerRight">
                     <h3 style="text-align: center;">About this site</h3>
-                    <p>Jestin Lewis is a professional basketball player from Richmond, Virginia currently playing in Giessen, Germany. 
+                    <p class="text-justify">Jestin Lewis is a professional basketball player from Richmond, Virginia currently playing in Giessen, Germany. 
                         In addition, he sells merchandise and mentors children in his home community through his annual Underrated Youth
                         Basketball Camp.</p>
                     <div class="socialMedia">
