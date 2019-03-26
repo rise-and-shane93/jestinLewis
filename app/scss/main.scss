@@ -148,7 +148,10 @@ p, a, button {
         text-transform: uppercase;
         text-align: center;
         z-index: 2;
-        //padding: 50px;
+        padding: 20px;
+        color: $mainColor;
+        background-color: rgba(220,20,60,0.6);
+        border-radius: 83% 17% 79% 21% / 30% 78% 22% 70% ;
     }
 
     video {
@@ -260,6 +263,11 @@ p, a, button {
 
     p {
         text-align: center;
+    }
+    #signUpForm {
+        .modal-dialog {
+            max-width: 700px;
+        }
     }
     .modal-title {
         color: #000;
@@ -417,6 +425,10 @@ footer {
     .footerLeft {
         @include flexRow();
         justify-content: left;
+        flex-wrap: wrap;
+    }
+    .footerLeft, .footerMiddle {
+        margin-bottom: 1rem;
     }
     #emailAddress {
         color: #007bff;
@@ -449,24 +461,27 @@ footer {
         height: 45px;
         margin: 10px 0;
         i {
-            width: 40px;
-            height: 40px;
+            width: 30px;
+            height: 30px;
             background-color: rgb(2,0,36);
             color: #ccc;
             //padding: 5px;
             margin-right: 5px;
             border-radius: $half;
-            font-size: 1.25rem;
+            font-size: 1rem;
         }
         .fa-map-marker-alt {
-            padding: 10px 13px;
+            padding: 7px 9px;
         }
         .fa-phone, .fa-envelope {
-            padding: 10px;
+            padding: 7px;
         }
         p {
             margin-bottom: 0;
-        }
+        }   
+    }
+    #mapLocation {
+        margin-right: 1rem;
     }
     .footerMiddle {
         @include flexColumn();
@@ -691,6 +706,25 @@ footer {
     footer {
         .footerLeft {
             @include flexColumn();
+            .footerLeftItem {
+                i {
+                    width: 40px;
+                    height: 40px;
+                    font-size: 1.25rem;
+                }
+                .fa-map-marker-alt {
+                    padding: 10px 13px;
+                }
+                .fa-phone, .fa-envelope {
+                    padding: 10px;
+                }
+            }
+            #mapLocation {
+                margin-right: 0;
+            }
+        }
+        .footerLeft, .footerMiddle {
+            margin-bottom: 0;
         }
         .clickToCopy {
             bottom: -25px;
