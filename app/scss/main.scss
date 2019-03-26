@@ -265,17 +265,7 @@ p, a, button {
         color: #000;
     }
 
-    .arrow-up {
-        position: absolute;
-        bottom: 0;
-        left: $half;
-        transform: translateX(-$half);
-        width: 0; 
-        height: 0; 
-        border-left: $triangleSize solid transparent;
-        border-right: $triangleSize solid transparent;    
-        border-bottom: $triangleSize solid rgb(2,0,36);
-    }
+    
 }
 
 #gallery {
@@ -298,6 +288,18 @@ p, a, button {
 
     h2, p {
         color: #fff;
+    }
+
+    .arrow-up {
+        position: absolute;
+        top: -20px;
+        left: $half;
+        transform: translateX(-$half);
+        width: 0; 
+        height: 0; 
+        border-left: $triangleSize solid transparent;
+        border-right: $triangleSize solid transparent;    
+        border-bottom: $triangleSize solid rgb(2,0,36);
     }
     
 }
@@ -412,6 +414,10 @@ p, a, button {
 }
 
 footer {
+    .footerLeft {
+        @include flexRow();
+        justify-content: left;
+    }
     #emailAddress {
         color: #007bff;
 
@@ -421,13 +427,17 @@ footer {
             cursor: pointer;
         }
     }
+    #contactEmail {
+        position: relative;
+    }
     .clickToCopy {
+        position: absolute;
         background-color: rgb(2,0,36);
         color: #fff;
         border-radius: 10px;
+        padding: 5px;
         font-weight: bold;
         transition: all .3s ease-in-out;
-        padding: 5px;
     }
     // .container {
     //     @include flexColumn();
@@ -525,7 +535,6 @@ footer {
             }
 
             .navbar-nav {
-                /////////////////////
                 a {
                     position: relative;
                     display: inline-block;
@@ -680,12 +689,13 @@ footer {
     }
 
     footer {
-        // .footerMiddle {
-        //     @include flexColumn();
-        //     p {
-        //         justify-self: flex-end;
-        //     }
-        // }
+        .footerLeft {
+            @include flexColumn();
+        }
+        .clickToCopy {
+            bottom: -25px;
+            left: 15%;
+        }
         .footerRight {
             p {
                 font-size: 0.75rem;

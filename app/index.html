@@ -161,16 +161,41 @@
                 <!--/#promoImg modal-->
                 <!--END MODAL-->   
             </div><!--/.container-->
-            <div class="arrow-up"></div>
+            
+            <article id="gallery">
+                <div class="photo-gallery py-5">
+                    <div class="closeWindow">&times;</div>
+                    <div class="container">
+                        <div class="intro">
+                            <h2 class="text-center">Lightbox Gallery</h2>
+                            <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae. </p>
+                        </div><!--/.intro-->
+                        <div class="row photos">
+                            <div class="col-6 col-md-4 col-lg-3 item my-2"><a href="images/camp/image1.jpeg" data-lightbox="photos"><img class="img-fluid" src="images/camp/image1.jpeg"></a></div>
+                            <div class="col-6 col-md-4 col-lg-3 item my-2"><a href="images/camp/image2.jpeg" data-lightbox="photos"><img class="img-fluid" src="images/camp/image2.jpeg"></a></div>
+                            <div class="col-6 col-md-4 col-lg-3 item my-2"><a href="images/camp/image3.jpeg" data-lightbox="photos"><img class="img-fluid" src="images/camp/image3.jpeg"></a></div>
+                            <div class="col-6 col-md-4 col-lg-3 item my-2"><a href="images/camp/image4.jpeg" data-lightbox="photos"><img class="img-fluid" src="images/camp/image4.jpeg"></a></div>
+                            <div class="col-6 col-md-4 col-lg-3 item my-2"><a href="images/camp/image5.jpeg" data-lightbox="photos"><img class="img-fluid" src="images/camp/image5.jpeg"></a></div>
+                            <div class="col-6 col-md-4 col-lg-3 item my-2"><a href="images/camp/image6.jpeg" data-lightbox="photos"><img class="img-fluid" src="images/camp/image6.jpeg"></a></div>
+                            <div class="col-6 col-md-4 col-lg-3 item my-2"><a href="images/camp/image7.jpeg" data-lightbox="photos"><img class="img-fluid" src="images/camp/image7.jpeg"></a></div>
+                            <div class="col-6 col-md-4 col-lg-3 item my-2"><a href="images/camp/image8.jpeg" data-lightbox="photos"><img class="img-fluid" src="images/camp/image8.jpeg"></a></div>
+                            <div class="col-6 col-md-4 col-lg-3 item my-2"><a href="images/camp/image9.jpeg" data-lightbox="photos"><img class="img-fluid" src="images/camp/image9.jpeg"></a></div>
+                            <div class="col-6 col-md-4 col-lg-3 item my-2"><a href="images/camp/image10.jpeg" data-lightbox="photos"><img class="img-fluid" src="images/camp/image10.jpeg"></a></div>
+                            <div class="col-6 col-md-4 col-lg-3 item my-2"><a href="images/camp/image11.jpeg" data-lightbox="photos"><img class="img-fluid" src="images/camp/image11.jpeg"></a></div>
+                        </div><!--/.row.photos-->
+                    </div><!--/.container-->
+                </div><!--/.photo-gallery-->
+                <div class="arrow-up"></div>
+            </article><!--/#gallery-->
         </section><!--/#camp-->
-        <section id="gallery">
+        <!--<section id="gallery">
             <div class="photo-gallery py-5">
                 <div class="closeWindow">&times;</div>
                 <div class="container">
                     <div class="intro">
                         <h2 class="text-center">Lightbox Gallery</h2>
                         <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae. </p>
-                    </div><!--/.intro-->
+                    </div>/.intro
                     <div class="row photos">
                         <div class="col-6 col-md-4 col-lg-3 item my-2"><a href="images/camp/image1.jpeg" data-lightbox="photos"><img class="img-fluid" src="images/camp/image1.jpeg"></a></div>
                         <div class="col-6 col-md-4 col-lg-3 item my-2"><a href="images/camp/image2.jpeg" data-lightbox="photos"><img class="img-fluid" src="images/camp/image2.jpeg"></a></div>
@@ -183,10 +208,10 @@
                         <div class="col-6 col-md-4 col-lg-3 item my-2"><a href="images/camp/image9.jpeg" data-lightbox="photos"><img class="img-fluid" src="images/camp/image9.jpeg"></a></div>
                         <div class="col-6 col-md-4 col-lg-3 item my-2"><a href="images/camp/image10.jpeg" data-lightbox="photos"><img class="img-fluid" src="images/camp/image10.jpeg"></a></div>
                         <div class="col-6 col-md-4 col-lg-3 item my-2"><a href="images/camp/image11.jpeg" data-lightbox="photos"><img class="img-fluid" src="images/camp/image11.jpeg"></a></div>
-                    </div><!--/.row.photos-->
-                </div><!--/.container-->
-            </div><!--/.photo-gallery-->
-        </section><!--/#gallery-->
+                    </div>/.row.photos
+                </div>/.container
+            </div>/.photo-gallery
+        </section>/#gallery-->
         <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScgXh66GVn3rU3PEHdPWRn8u4yRsdTxry15RadFQtwUxXqrUg/viewform?embedded=true" 
             width="640" height="1186" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
         <div style="width: 50%; height: 300px; background-color: red;" data-aos="zoom-in" data-aos-duration="3000" data-aos-once="true">
@@ -299,10 +324,11 @@
                         <i class="fas fa-phone"></i>
                         <p><a href="tel:+11234567890">+1 (123) 456-7890</a></p>
                     </div><!--/.footerLeftItem-->
-                    <div class="footerLeftItem">
+                    <div class="footerLeftItem" id="contactEmail">
                         <i class="fas fa-envelope"></i>
                         <p><a id="emailAddress">Jlewistutu5@icloud.com</a>
-                        <span class="clickToCopy"><i class="fas fa-arrow-left"></i> <span class="clickOrTap"></span> to Copy</span></p>
+                        <span class="clickToCopy"><i class="fas fa-arrow-up" style="width: auto; height: auto;"></i> 
+                            <span class="clickOrTap"></span> to Copy</span></p>
                     </div><!--/.footerLeftItem-->
                 </div><!--/.col-->
                 <div class="col-12 col-md-4 order-3 order-md-2 footerMiddle">

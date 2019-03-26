@@ -89,91 +89,13 @@ $navbarLinks.click(function(event) {
 });
 
 //changes the active class on page scroll
-//get offsets for all your div's.  Now. you can access the number of pixels from the top of the document
-//each object is by using one.top, two.top, or whatever you name your variables
 var $homeLink = $(".homeLink").offset();
 var $aboutMeLink = $("#aboutTitle").offset();
 var $summerCampLink = $("#camp").offset();
 var $shopLink = $("#shop").offset();
 var $contactLink = $("#contact").offset();
 
-/*
-$(document).ready(function() {
-    $(window).scroll(function(){
-        var screenPosition = $(document).scrollTop();
-        if (screenPosition < $homeLink.top) {
-            $( ".homeLink" ).addClass( "active" );
-            $(".aboutMeLink").removeClass("active");
-            $(".summerCampLink").removeClass("active");
-            $(".shopLink").removeClass("active");
-            $(".contactLink").removeClass("active");
-        }
-        if (screenPosition >= $aboutMeLink.top) {
-            $(".aboutMeLink").addClass("active");
-            $( ".homeLink" ).removeClass( "active" );
-            $(".summerCampLink").removeClass("active");
-            $(".shopLink").removeClass("active");
-            $(".contactLink").removeClass("active");
-        }
-        if (screenPosition >= $summerCampLink.top) {
-            $(".summerCampLink").addClass("active");
-            $(".aboutMeLink").removeClass("active");
-            $( ".homeLink" ).removeClass( "active" );
-            $(".shopLink").removeClass("active");
-            $(".contactLink").removeClass("active");
-        }
-        if (screenPosition >= $shopLink.top) {
-            $(".shopLink").addClass("active");
-            $(".summerCampLink").removeClass("active");
-            $(".aboutMeLink").removeClass("active");
-            $( ".homeLink" ).removeClass( "active" );
-            $(".contactLink").removeClass("active");
-        }
-        if (screenPosition >= $contactLink.top) {
-            $(".contactLink").addClass("active");
-            $(".shopLink").removeClass("active");
-            $(".summerCampLink").removeClass("active");
-            $(".aboutMeLink").removeClass("active");
-            $( ".homeLink" ).removeClass( "active" );
-        }
-    });
-});
-*/
-
-//$(document).ready(function () {
-    /*$(window).scroll(function(){
-        var window_top = $(window).scrollTop() + 12; 
-         the "12" should equal the margin-top value for nav.stickydiv
-        var div_top = $('#checkdiv').offset().top;
-        if (window_top >= div_top) {
-                $('nav').addClass('stickydiv');
-            } else {
-                $('nav').removeClass('stickydiv');
-            }
-    });*/  
-
-
-  $(document).on("scroll", onScroll);
-    // $('a[href^="#"]').on('click', function (e) {
-    //     e.preventDefault();
-    //     $(document).off("scroll");
-        
-    //     $('a').each(function () {
-    //         $(this).removeClass('active');
-    //     })
-    //     $(this).addClass('active');
-      
-    //     var target = this.hash,
-    //         menu = target;
-    //     $target = $(target);
-    //    $('html, body').stop().animate({
-    //         'scrollTop': $target.offset().top+1000
-    //     }, 600, 'swing', function () {
-    //         window.location.hash = target;
-    //         $(document).on("scroll", onScroll);
-    //     });
-    // });
-//});
+$(document).on("scroll", onScroll);
 
 function onScroll(event){
     var scrollPos = $(document).scrollTop() + 125;
@@ -312,8 +234,7 @@ if ( navigator.userAgent.match(/Android/i)
 
 
 $(document).ready(function() {
-    //$gallerySection.css("height", "0");
-    $gallerySection.hide();
+    $gallerySection.css("height", "0");
     $galleryInner.hide();
     $blackArrow.hide();
 });
@@ -340,6 +261,7 @@ $closeButton.click(function() {
 and has span hovering in and out of view*/
 
 const email = document.querySelector("#emailAddress");
+const $email = $("#emailAddress");
 const clickToCopy = document.querySelector(".clickToCopy");
 const clickOrTap = document.querySelector(".clickOrTap");
 
@@ -351,16 +273,18 @@ if ( navigator.userAgent.match(/Android/i)
 || navigator.userAgent.match(/BlackBerry/i)
 || navigator.userAgent.match(/Windows Phone/i)
 ) {
+    //$email.attr("title", "Click to Copy");
     clickOrTap.textContent = "Tap";
 } else {
+    //$email.attr("title", "Click to Copy");
     clickToCopy.style.display = "none";
-    clickToCopy.style.opacity = "0";
+    //clickToCopy.style.opacity = "0";
     clickOrTap.textContent = "Click";
     $("#emailAddress").hover(function() {
         $(".clickToCopy").show();
-        $(".clickToCopy").animate({opacity: 1}, 800);
+        //$(".clickToCopy").animate({opacity: 1}, 800);
     }, function() {
-        $(".clickToCopy").animate({opacity: 0}, 800);
+        //$(".clickToCopy").animate({opacity: 0}, 800);
         $(".clickToCopy").hide();
     });     
 }
@@ -378,6 +302,6 @@ email.addEventListener("copy", function(event) {
 });
 
 $("#emailAddress").click(function() {
-    $(".clickToCopy").text("Copied!");
+    clickToCopy.textContent = "Copied!";
 });
 
