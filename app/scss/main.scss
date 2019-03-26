@@ -638,6 +638,19 @@ footer {
     
     .jumbotron {
         display: block;
+        img[src*="jLewPort10"],
+        img[src*="jLewPort11"] {
+            position: absolute;
+            top: 0;
+            height: 100%;
+        }
+        img[src*="jLewPort10"] {
+            left: 0;
+        }
+        img[src*="jLewPort11"] {
+            right: 0;
+        }
+
     }
 
     #about {

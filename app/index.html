@@ -73,6 +73,7 @@
  -->    </header>
     <main>
         <div class="jumbotron" id="welcome" class="my-5">
+            <img src="images/jestin/portrait/jLewPort10.jpg" alt="Jestin Lewis in his Giessen jersey" data-aos="fade-right">
             <video muted loop id="lewisVideo">
                 <source src="../videos/highlights3.mp4" type="video/mp4">
                 <source src="../videos/highlights3.ogg" type="video/ogg">
@@ -80,19 +81,20 @@
             <h1>Welcome to the Official Website<br> of Jestin Lewis</h1>
             <i class="fa fa-pause pausePlay"></i>
             <i class="fa fa-play pausePlay"></i>
+            <img src="images/jestin/portrait/jLewPort11.jpg" alt="Jestin Lewis in his Giessen jersey" data-aos="fade-left">
         </div><!--/jumbotron-->
         <div class="container mb-5">
             <section id="about">
                 <h1 id="aboutTitle">THANK YOU GOD</h1>
                 <div class="vl"></div>
                     <div class="row">
-                        <div class="col-12 col-md-6 tuRandomImg">
+                        <div class="col-12 col-md-6 tuRandomImg" data-aos="zoom-in-down">
                             <!--This is where a random photo of Jestin will appear.
                             If the viewing device is a laptop/desktop, the photo will
                             be a portrait photo, and if it is a tablet/phone, it will
                             be a landscape photo-->
                         </div><!--/.col-->
-                        <div class="col-12 col-md-6 intro">
+                        <div class="col-12 col-md-6 intro" data-aos="zoom-in-left">
                             <p>What's going on everyone, my name is Jestin "Tu" Lewis and I am currently a 
                             professional basketball player in Giessen, Germany. I am originally from Richmond, Virginia
                             and love the game of basketball. It is my life goal to make it in the NBA and inspire others to
@@ -110,9 +112,9 @@
                     This camp will include fundamental development, guest speakers,<br class="hideBrOnDesk"> team play, and much more&#33;</p>
                 <p>For more information, view the promo and gallery photos below, or click the button to sign up&#33;</p>
                 <div class="buttons">
-                    <button type="button" class="btn-danger my-2" data-toggle="modal" data-target="#promoImg">View Promo</button>
-                    <button id="galleryButton" type="button" class="btn-danger my-2" data-toggle="modal" data-target="#campGallery">Gallery</button>
-                    <button type="button" class="btn-danger my-2" data-toggle="modal" data-target="#signUpForm">Sign me up&#33;</button>
+                    <button data-aos="fade-up" type="button" class="btn-danger my-2" data-toggle="modal" data-target="#promoImg">View Promo</button>
+                    <button data-aos="fade-up" data-aos-delay="300" id="galleryButton" type="button" class="btn-danger my-2" data-toggle="modal" data-target="#campGallery">Gallery</button>
+                    <button data-aos="fade-up" data-aos-delay="600" type="button" class="btn-danger my-2" data-toggle="modal" data-target="#signUpForm">Sign me up&#33;</button>
                 </div><!--/.buttons-->
                 <!--START MODAL-->
                 <!--#promoImg modal-->
@@ -148,7 +150,7 @@
                             </div>
                             <div class="modal-body">
                                 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScgXh66GVn3rU3PEHdPWRn8u4yRsdTxry15RadFQtwUxXqrUg/viewform?embedded=true" 
-                                width="100%" height="1186" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+                                width="100%" height="1300" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -359,7 +361,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
-    <script>AOS.init();</script>
+    <script>
+    AOS.init({
+        once: true,
+        //offset: 0
+    });
+    </script>
     <script src="js/main.js"></script>
     <!-- <script>
         $(document).on("click", '[data-toggle="lightbox"]', function(event) {
