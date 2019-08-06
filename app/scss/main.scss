@@ -8,6 +8,7 @@ $Staatliches: 'Staatliches', sans-serif;
 $triangleSize: 30px;
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1024px;
+$breakpoint-largeScreen: 1420px;
 $text: value="text";
 $submit: value="submit";
 $grey: #DCDCDC;
@@ -69,6 +70,10 @@ header {
 
 .hideBrOnDesk {
     display: block;
+}
+
+.showBrOnLgScreen {
+    display: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -422,6 +427,7 @@ p, a, button {
 }
 
 footer {
+    position: relative;
     .footerLeft {
         @include flexRow();
         justify-content: left;
@@ -520,6 +526,11 @@ footer {
                 text-decoration: none;
             }
         }
+    }
+    #siteseal {
+        position: absolute;
+        bottom: 0;
+        right: 0;
     }
 }
 
@@ -750,4 +761,10 @@ footer {
         }
     }
     
+}
+
+@media (min-width: $breakpoint-largeScreen) {
+    .showBrOnLgScreen {
+        display: block;
+    }
 }

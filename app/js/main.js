@@ -1,5 +1,9 @@
-//add fixed-top class to navbar on scroll
+//URL redirect
+// if (location.protocol != 'https:') {
+// 	location.href= 'https:' + window.location.href.substring(window.location.protocol.length);
+// }
 
+//add fixed-top class to navbar on scroll
 
 $(document).ready(function() {
   var $navbar = $("#mainNav");
@@ -154,8 +158,6 @@ if ( navigator.userAgent.match(/Android/i)
 //sets random image on about section
 const aboutImg = document.querySelector('.tuRandomImg');
 
-//Adena random image selector
-
 //for large screens (Portrait)
 var tuImagesPort = [
     "images/jestin/portrait/jLewPort1.jpg",
@@ -256,6 +258,22 @@ $closeButton.click(function() {
     $gallerySection.animate({height: "0px"}, 1000);
     $blackArrow.fadeOut();
 });
+
+//sets the iframe height depending on screen size
+const iframe = document.querySelector("iframe");
+
+if ( navigator.userAgent.match(/Android/i)
+    || navigator.userAgent.match(/webOS/i)
+    || navigator.userAgent.match(/iPhone/i)
+    || navigator.userAgent.match(/iPad/i)
+    || navigator.userAgent.match(/iPod/i)
+    || navigator.userAgent.match(/BlackBerry/i)
+    || navigator.userAgent.match(/Windows Phone/i)
+    ) {
+    iframe.setAttribute("height", "450");
+} else {
+    iframe.setAttribute("height", "600");
+}
 
 /*copies email address on click
 and has span hovering in and out of view*/

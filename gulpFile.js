@@ -41,11 +41,11 @@ function styleStream() {
 
 function scriptStream() {
 	return gulp.src(paths.script.src)
-	.pipe(babel({ 
-		presets: ['@babel/env'] 
+	.pipe(babel({
+		presets: ['@babel/env']
 	}))
 	.pipe(minify({
-		mangle: { 
+		mangle: {
 			keepClassName: true,
 			comments: false
 		}
