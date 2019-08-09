@@ -32,24 +32,6 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <!-- <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About Me</a>
-                        <p>Thank you God</p>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Summer Camp</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Shop</a>
-                    </li>a
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
-                </ul> -->
                 <ul class="navbar-nav">
                     <a class="nav-link active homeLink" href="#welcome">
                         Home
@@ -76,7 +58,7 @@
     <main>
         <div class="jumbotron" id="welcome" class="my-5">
             <img src="images/jestin/portrait/jLewPort10.jpg" alt="Jestin Lewis in his Giessen jersey" data-aos="fade-right">
-            <video muted loop id="lewisVideo">
+            <video autoplay muted loop id="lewisVideo">
                 <source src="../videos/highlights3.mp4" type="video/mp4">
                 <source src="../videos/highlights3.ogg" type="video/ogg">
             </video>
@@ -87,8 +69,9 @@
         </div><!--/jumbotron-->
         <div class="container mb-5">
             <section id="about">
-                <h1 id="aboutTitle">THANK YOU GOD</h1>
-                <div class="vl"></div>
+                <article id="about-intro">
+                    <h2 id="aboutTitle">THANK YOU GOD</h2>
+                    <div class="vl"></div>
                     <div class="row">
                         <div class="col-12 col-md-6 tuRandomImg" data-aos="zoom-in-down">
                             <!--This is where a random photo of Jestin will appear.
@@ -97,14 +80,34 @@
                             be a landscape photo-->
                         </div><!--/.col-->
                         <div class="col-12 col-md-6 intro" data-aos="zoom-in-left">
-                            <p>What's going on everyone, my name is Jestin "Tu" Lewis and I am currently a 
-                            professional basketball player in Giessen, Germany. I am originally from Richmond, Virginia
-                            and love the game of basketball. It is my life goal to make it in the NBA and inspire others to
-                            achieve their goals. I host an annual summer camp in Richmond as a way to give back to my home
-                            community. Feel free to sign up if you are interested&#33; I would love to see you there.</p>
+                            <p>Hello everyone my name is Jestin “TuTu” Lewis. I am a professional 
+                                basketball player and also an entrepreneur. Born and Raised in 
+                                Richmond, Virginia. I have played basketball in Hungary and Germany 
+                                but my dream goal is to make it to the NBA. Another one of my ultimate 
+                                goals is to give kids in my community hope and help them believe that 
+                                they can achieve anything they put their mind too. I am big on trying 
+                                to give back to my community in the city as well.</p>
                         </div><!--/.col-->
                     </div><!--/.row-->
-            </section>
+                </article><!--/#about-intro-->
+                <hr>
+                <article id="about-highlights">
+                    <h2>Career Highlights</h2>
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <iframe width="100%" src="https://www.youtube.com/embed/7ofF6FM28oI" 
+                            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen style="height: 315px;">
+                            </iframe>
+                        </div><!--/.col-->
+                        <div class="col-12 col-md-6">
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/BL2QyBsLS-U" 
+                            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen></iframe>
+                        </div><!--/.col-->
+                    </div><!--/.row-->
+                </article><!--/#about-highlights-->
+            </section><!--/#about-->
         </div><!--/container-->
         <section id="camp" class="mt-5 py-5">
             <div class="container py-5">
@@ -223,40 +226,43 @@
             <!-- <p style="opacity: 0;">Hey</p> -->
             <h1 class="py-3">Shop</h1>
             <div class="container">
+                <!-- <div class="row py-1">
+                    <div class="col-12 col-md-4">
+                        <div class="shopItem my-3" id='product-component-05b87f933f1'></div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="shopItem my-3">
+                            <div id='product-component-2ae42e6f614'></div>                
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="shopItem my-3">
+                            <img src="images/shop/womens/wTshirt1.jpg" alt="A woman's t shirt">
+                            <p class="itemName">Underrated Woman's<br> Tshirt Style 1</p>
+                            <h5 class="itemPrice">&#36;30</h5>        
+                        </div>
+                        <div class="comingSoon">
+                            <h2 class="text-center">Coming<br class="hideBrOnDesk"> soon&#33;&#33;&#33;</h2>
+                        </div>                        
+                    </div>
+                </div>
                 <div class="row py-1">
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <div class="shopItem my-3">
-                            <img src="images/shop/mens/mHoodie2.jpg" alt="A men's hoodie">
-                            <p class="itemName">Underrated Men's<br> Hoodie Style 2</p>
-                            <h5 class="itemPrice">&#36;40</h5>
-                        </div><!--/.shopItem-->
-                    </div><!--/.col-->
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <div class="shopItem my-3">
-                            <img src="images/shop/mens/mTshirt5.jpg" alt="A men's t shirt">
-                            <p class="itemName">Underrated Men's<br> Hoodie Style 2</p>
-                            <h5 class="itemPrice">&#36;25</h5>        
-                        </div><!--/.shopItem-->
-                    </div><!--/.col-->
-                    <div class="col-6 col-md-4 col-lg-3">
-                            <div class="shopItem my-3">
-                                <img src="images/shop/womens/wTshirt1.jpg" alt="A woman's t shirt">
-                                <p class="itemName">Underrated Woman's<br> Tshirt Style 1</p>
-                                <h5 class="itemPrice">&#36;30</h5>        
-                            </div><!--/.shopItem-->
-                    </div><!--/.col-->
-                    <div class="col-6 col-md-4 col-lg-3">
+                    <div class="col-12 col-md-4">
                         <div class="shopItem my-3">
                             <img src="images/shop/womens/wYogaPants2.jpg" alt="Women's yoga pants">
                             <p class="itemName">Underrated<br> Yoga Pants</p>
                             <h5 class="itemPrice">&#36;25</h5>        
-                        </div><!--/.shopItem-->
-                    </div><!--/.col-->
-                </div><!--/.row-->
+                        </div>
+                        <div class="comingSoon">
+                            <h2 class="text-center">Coming<br class="hideBrOnDesk"> soon&#33;&#33;&#33;</h2>
+                        </div>                            
+                    </div>
+                </div> -->
+                <div id='collection-component-5a51c8844d2'></div>
             </div><!--/.container-->
-            <div class="comingSoon">
+            <!-- <div class="comingSoon">
                 <h1>Shop<br class="hideBrOnDesk"> coming<br class="hideBrOnDesk"> soon&#33;&#33;&#33;</h1>
-            </div>
+            </div> -->
         </section><!--/#shop-->
         <section id="contact" class="py-3">
             <div class="container">
@@ -373,13 +379,8 @@
     });
     </script>
     <script src="js/main.js"></script>
-    <!-- <script>
-        $(document).on("click", '[data-toggle="lightbox"]', function(event) {
-  event.preventDefault();
-  $(this).ekkoLightbox();
-});
-    </script> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js.map"></script>-->
+    <!-- <script src="js/shopify/urTee.js"></script>
+    <script src="js/shopify/gClassicB.js"></script> -->
+    <script src="js/shopify/jl5Clothing.js"></script>
 </body>
 </html>

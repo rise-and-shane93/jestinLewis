@@ -666,8 +666,14 @@ footer {
 
     #about {
 
-        position: relative;
+        &-intro {
+            position: relative;
+        }
 
+        h2 {
+            text-align: center;
+        }
+        
         .intro {
             p {
                 padding: 0 5rem;
